@@ -9,7 +9,7 @@ function Hero() {
         <Image src="/images/site/john.jpg" alt="An image of Luke" width={300} height={300}/>
       </div>
       <h1>Hi, I'm Long John!</h1>
-      <p>Let me tell you all about my life as a stuffed puppy.</p>
+      <p>Let me tell you all about my life as a stuffed puppy and frameworks too!</p>
 		</section>
 	);
 }
