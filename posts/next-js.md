@@ -2,7 +2,7 @@
 title: 'next-js'
 date: '2020-10-31'
 image: next-js.jpg
-excerpt: 'It makes life easier.'
+excerpt: 'Making life even easier.'
 isFeatured: true
 ---
 
