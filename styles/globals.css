@@ -1,8 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto&family=Source+Sans+Pro:wght@300&display=swap');
 
+html{
+  font-family: "Noto Sans", sans-serif, "Noto Serif", serif;
+  box-sizing: border-box;
+}
+
 * {
   box-sizing: border-box;
 }
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
 
 body {
   --color-grey-50: hsl(265, 55%, 96%);
@@ -72,3 +82,4 @@ button {
   font: inherit;
   cursor: pointer;
 }
+
