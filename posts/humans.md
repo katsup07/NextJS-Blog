@@ -1,6 +1,6 @@
 ---
 title: Dream Time
-excerpt: Somehow I was both a human and a dog.
+excerpt: All you need is time.
 image: humans.jpg
 isFeatured: true
 date: '2014-10-31'
