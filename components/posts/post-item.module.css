@@ -9,7 +9,7 @@
 }
 
 .image {
-  width: 100%;
+  max-width: 100%;
   max-height: 20rem;
   overflow: hidden;
 }
@@ -34,5 +34,30 @@
 
 .content p {
   line-height: var(--size-6);
+}
+
+
+@media (max-width: 568px) {
+  .post{
+   width: 100%;
+   margin: auto auto;
+   padding: 0;
+  }
+
+  .content h3 {
+    margin: 0;
+    font-size: var(--size-6);
+  }
+
+  .content p {
+    font-size: var(--size-3);
+    line-height: var(--size-2);
+  } 
+
+  .image {
+    max-width: 100%;
+    max-height: 20rem;
+    overflow: hidden;
+  }
 }
 

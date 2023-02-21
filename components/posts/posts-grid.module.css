@@ -7,3 +7,17 @@
   gap: 1.5rem;
   align-content: center;
 }
+
+
+
+@media (max-width: 468px) {
+  .container ul, .container li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+}

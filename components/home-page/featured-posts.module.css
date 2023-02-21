@@ -13,5 +13,6 @@
 @media (min-width: 768px) {
   .latest h2 {
     font-size: var(--size-16);
+    width: 100%;
   }
 }

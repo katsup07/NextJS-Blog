@@ -88,7 +88,7 @@ const ContactForm = () => {
       <>
         {notificationJSX()}
         <section className={classes.contact}>
-          <h1>Leave LJ a message.</h1>
+          <h1>Leave me a message.</h1>
           <form className={classes.form} onSubmit={sendMessageHandler}>
             <div className={classes.controls}>
               <div className={classes.control}>
