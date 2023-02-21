@@ -51,7 +51,7 @@
 
   .content p {
     font-size: var(--size-3);
-    line-height: var(--size-2);
+    line-height: var(--size-3);
   } 
 
   .image {
