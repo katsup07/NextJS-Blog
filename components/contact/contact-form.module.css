@@ -67,7 +67,28 @@
 
 @media (min-width: 768px) {
   .contact h1 {
-    font-size: var(--size-16);
+    font-size: var(--size-12);
     text-align: center;
   }
 }
+
+@media (max-width: 568px) {
+  .contact h1 {
+    font-size: var(--size-6);
+  }
+
+  .form label{
+    font-size: var(--size-4)
+  }
+
+  .form input,
+.form textarea {
+  font: var(--size-4);
+  padding: 0;
+}
+
+  .form button{
+    font-size: var(--size-4);
+  }
+}
+

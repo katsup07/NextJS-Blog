@@ -1,28 +1,9 @@
 import classes from './contact-form.module.css';
 import Notification from '../ui/notification';
 import { useState, useEffect } from 'react';
-
-async function sendContactData(contactDetails, setRequestStatus){
-  const response = await fetch('/api/contact', {
-    method: 'POST',
-    body: JSON.stringify(contactDetails),
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  });
-
-
-  const responseData = await response.json();
-  if(!response.ok)
-    throw new Error(responseData.message || 'Something went wrong');
-  
-  return responseData;
-}
+import { sendContactData }  from '../../lib/contact-util';
 
 const ContactForm = () => {
-	// const [enteredEmail, setEnteredEmail] = useState('');
-	// const [enteredName, setEnteredName] = useState('');
-	// const [enteredMessage, setEnteredMessage] = useState('');
 	const [data, setData] = useState({email: '', name: '', message: ''});
   const [requestStatus, setRequestStatus] = useState(); // 'pending', 'success', or 'error'
   const [ requestError, setRequestError ] = useState('');
@@ -35,8 +16,6 @@ const ContactForm = () => {
       
       return () => clearTimeout(timer);
     }
-
-
   }, [requestStatus])
 
   const setField = (e, type) => {

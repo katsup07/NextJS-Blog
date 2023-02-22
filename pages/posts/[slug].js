@@ -1,14 +1,36 @@
 import PostContent from '../../components/posts/posts-detail/post-content';
 import { getPostData, getPostsFiles } from './../../lib/posts-util';
 import Head from 'next/head';
+import Comment from '../../components/comment/comment';
+import AllComments from '../../components/comment/all-comments';
+import { getComments, filterCommentsByPostId } from '../../lib/comments-util';
+import { useState, useEffect } from 'react';
 
 function PostDetailPage(props) {
+  const [allComments, setAllComments ] = useState(); // [{comment:..., date:..., name:..., postId:..., _id:...},...]
+  const [triggerAnEffect, setTriggerAnEffect] = useState(false);
+ 
+  useEffect(() => {// fetch all comments
+    const doGetComments = async() => {
+      // const comments = await getComments();
+      // setAllComments(comments.data);
+      if(props && props.post && props.post.slug){
+        const filteredComments = await filterCommentsByPostId(props.post.slug || '');
+        console.log('filtered comments: ', filteredComments);
+        setAllComments(filteredComments);
+      }
+    }
+   doGetComments();
+  },[triggerAnEffect]); 
+
 	return <>
    <Head>
     <title>{props.post.title}</title>
     <meta name="description" content={props.post.excerpt}></meta>
   </Head>
     <PostContent post={props.post} />
+    <Comment updateComments={() => setTriggerAnEffect(!triggerAnEffect)}/>
+    <AllComments comments={allComments} />
   </>;
 }
 
@@ -16,6 +38,7 @@ export function getStaticProps(context) {
 	const { slug } = context.params;
 
 	const postData = getPostData(slug);
+  console.log('postData', postData);
 
 	return {
 		props: {

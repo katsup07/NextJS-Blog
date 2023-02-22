@@ -5,10 +5,10 @@ import Head from "next/head";
 function AllPostsPage({posts}){
   
   return <>
-  <Head>
-    <title>All Posts</title>
-    <meta name="description" content="A list of all my interests and sometimes programming, like javascript, written as blog posts."></meta>
-  </Head>
+    <Head>
+      <title>All Posts</title>
+      <meta name="description" content="A list of all my interests and sometimes programming, like javascript, written as blog posts."></meta>
+    </Head>
     <AllPosts posts={posts} />
   </>;
 }

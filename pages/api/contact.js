@@ -5,7 +5,7 @@ async function handler(req, res) {
 		// const data = JSON.parse(req.body); // ! set content-type in headers to avoid needing to do this
 		const { email, name, message } = req.body;
 
-		console.log('back-end', email, name, message);
+		console.log('back-end-message-handler', email, name, message);
 
 		if (
 			!email ||
@@ -26,8 +26,8 @@ async function handler(req, res) {
 		const newMessage = { email, name, message };
 		let client;
   
-    const doubleSlash = '//';
-		const connectionString = `mongodb+srv:${doubleSlash}${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_cluster_name}.1e0swwq.mongodb.net/?retryWrites=true&w=majority`;
+    const doubleSlash = '//'; 
+		const connectionString = `mongodb+srv:${doubleSlash}${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_cluster_name}.pnsykkk.mongodb.net/?retryWrites=true&w=majority`;
 		try {
 			client = await MongoClient.connect(connectionString);
 		} catch (err) {

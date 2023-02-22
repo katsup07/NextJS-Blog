@@ -38,3 +38,21 @@
   max-width: 40rem;
   margin: auto;
 }
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: var(--size-8);
+    margin: var(--size-2) 0;
+    color: var(--color-grey-300);
+  }
+
+  .hero p {
+    font-size: var(--size-4);
+    color: var(--color-grey-200);
+    width: 95%;
+    max-width: 40rem;
+    margin: auto;
+  }
+  
+}
+
