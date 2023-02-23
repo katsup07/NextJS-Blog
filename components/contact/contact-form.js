@@ -41,7 +41,7 @@ const ContactForm = () => {
       email: data.email,
       name: data.name,
       message: data.message,
-      }, setRequestStatus);
+      });
 
       setData({email: '', name: '', message: ''});
       setRequestStatus('success');
