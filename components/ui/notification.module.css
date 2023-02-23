@@ -7,12 +7,12 @@
   padding: 0 var(--size-8);
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
   position: fixed;
-  height: 5rem;
-  bottom: 200px;
+  height: 4rem;
+  top: 0px;
   width: 100%;
-  left: 200px;
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
+  transition: all 0.2s;
+/*   left: 200px; */
+  border-radius: 0;
 }
 
 .notification h2 {
@@ -25,19 +25,22 @@
 }
 
 .success {
-  border: 3px solid var(--color-success-500);
+  border: 2px solid var(--color-success-500);
+  border-top: none;
   background: var(--color-grey-900);
   color: var(--color-success-500);
 }
 
 .pending{
-  border: 3px solid var(--color-pending-500);
+  border: 2px solid var(--color-pending-500);
+  border-top: none;
   background: var(--color-grey-900);
   color: var(--color-pending-500);
 }
 
 .error {
-  border: 3px solid var(--color-error-500);
+  border: 2px solid var(--color-error-500);
+  border-top: none;
   background: var(--color-grey-900);
   color: var(--color-error-500);
 }
@@ -46,7 +49,7 @@
   .notification {
     width: 40rem;
     left: calc(50% - 20rem);
-    border-top-right-radius: 6px;
-    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 }
