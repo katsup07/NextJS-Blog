@@ -48,7 +48,7 @@ const Comment = ({ updateComments }) => {
 				<Notification
 					status='success'
 					title='Success'
-					message='Your comment was added.'
+					message='Comment successfully added.'
 				/>
 			);
 		else if (requestStatus === 'pending')
@@ -56,7 +56,7 @@ const Comment = ({ updateComments }) => {
 				<Notification
 					status='pending'
 					title='Pending'
-					message='Trying to add comment...'
+					message='Adding comment...'
 				/>
 			);
 		else if (requestStatus === 'error')
