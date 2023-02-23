@@ -17,6 +17,7 @@ async function handler(req, res){
   	try {
 			client = await connectToDb();
 		} catch (err) {
+      console.log('error in get comments handler connectToDB()', err);
 			res.status(500).json({ message: err });
 			return;
 		}
@@ -26,7 +27,7 @@ async function handler(req, res){
     try{
       result = await db.collection('comments').find({}).toArray();
     } catch(err){
-      console.log('error getComments()', err);
+      console.log('error in get comments db.collection().find()', err);
       client.close();
       res.status(500).json({message: err});
       return;
