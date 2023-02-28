@@ -33,7 +33,7 @@
 
 .comment input:focus, .comment textarea:focus{
  outline-color: var(--color-grey-100);
- background-color: var(--color-grey-100);
+ background-color: var(--color-comment-background);
  border: none;
 }
 
