@@ -40,6 +40,8 @@ body {
 
   --color-link-hover: rgb(250, 254, 128);
 
+  --color-comment-background: rgb(188, 176, 209);
+
   --color-shadow: rgba(74, 67, 76, 0.339);
 
   --color-success-100: #a2f0bc;
