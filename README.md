@@ -1,7 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). 
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). It also uses Vercel and MongoDB.
 
 ## Try It
 It can be viewed [here](https://next-js-weblog.vercel.app/).
+
+## Features
+Homepage
+![LJ-s-World (1)](https://github.com/katsup07/NextJS-Blog/assets/90941888/f999f7d4-dea8-4ef8-8241-e3e7af9b73de)
+<br>
+<br>
+Featured Posts<br>
+![LJ-s-World](https://github.com/katsup07/NextJS-Blog/assets/90941888/bf494b7b-98ad-4c33-83fa-78b87d33defc)
+<br>
+<br>
+Individual Posts Details<br>
+![Mastering-JavaScript](https://github.com/katsup07/NextJS-Blog/assets/90941888/c48fa5b4-6fb2-4799-a421-8949386b96b5)
+<br>
+<br>
+Readers can leave comments.
+![Cutey](https://github.com/katsup07/NextJS-Blog/assets/90941888/58373d5b-c89a-46cb-96e0-3f54b9044971)
+<br>
+<br>
+Readers can send private messages to blog author.
+![Contact-Me](https://github.com/katsup07/NextJS-Blog/assets/90941888/c643ff8f-96c1-43b4-9c92-fd560775fbb0)
+
+
 
 ## Getting Started
 
