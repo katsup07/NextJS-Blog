@@ -11,7 +11,6 @@ async function handler(req, res){
 
   // === Get ===
   if(req.method === 'GET'){
-    console.log('Getting data from db...'); 
   
     let client;
   	try {
@@ -32,8 +31,6 @@ async function handler(req, res){
       res.status(500).json({message: err});
       return;
     }
-
-    console.log(result);
     
   res.status(200).json({message: 'success', data: result});
   }
@@ -42,8 +39,6 @@ async function handler(req, res){
   if(req.method === 'POST'){
     const { commentData } = req.body;
     const {comment, name, postId } = commentData;
- 
-    console.log('back-end-comment-handler', commentData);
 
     if(comment.trim() === '' || name.trim() === ''){
       res.status(422).json({message: 'Invalid input. Comment and name fields must not be blank.'});

@@ -10,7 +10,6 @@ const ContactForm = () => {
   
   useEffect(() => {
     if(requestStatus === 'success' || requestStatus === 'error'){
-      console.log('data:!!! ', data);
       const timer = setTimeout( () => setRequestStatus(''), 4000);
       setRequestError('');
       
@@ -25,16 +24,11 @@ const ContactForm = () => {
       setData( prevData => ({...prevData, name: e.target.value}));
     else if(type === 'message')
       setData( prevData => ({...prevData, message: e.target.value}));
-      
-    console.log('front-end', data);
   }
 
 	const sendMessageHandler = async (e) => {
 		e.preventDefault();
     setRequestStatus('pending');
-
-   
-    console.log('front-end', data);
 
     try{
       await sendContactData({

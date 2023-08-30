@@ -5,8 +5,6 @@ async function handler(req, res) {
 		// const data = JSON.parse(req.body); // ! set content-type in headers to avoid needing to do this
 		const { email, name, message } = req.body;
 
-		console.log('back-end-message-handler', email, name, message);
-
 		if (
 			!email ||
 			!email.includes('@') ||

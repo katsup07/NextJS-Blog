@@ -12,11 +12,8 @@ function PostDetailPage(props) {
  
   useEffect(() => {// fetch all comments
     const doGetComments = async() => {
-      // const comments = await getComments();
-      // setAllComments(comments.data);
       if(props && props.post && props.post.slug){
         const filteredComments = await filterCommentsByPostId(props.post.slug || '');
-        console.log('filtered comments: ', filteredComments);
         setAllComments(filteredComments);
       }
     }
@@ -38,7 +35,6 @@ export function getStaticProps(context) {
 	const { slug } = context.params;
 
 	const postData = getPostData(slug);
-  console.log('postData', postData);
 
 	return {
 		props: {

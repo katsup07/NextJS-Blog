@@ -30,7 +30,6 @@ const Comment = ({ updateComments }) => {
 		e.preventDefault();
 		setRequestStatus('pending');
 		try {
-			console.log('handling comment...', enteredComment, enteredName, postId);
 			await postComment({ comment: enteredComment, name: enteredName, postId });
 			setRequestStatus('success');
 			setTimeout(() => updateComments(), 500); // ensures new comment is already posted to database
